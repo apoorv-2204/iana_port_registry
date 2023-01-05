@@ -2,17 +2,12 @@ defmodule IanaPortRegistry do
   @moduledoc """
   Documentation for `IanaPortRegistry`.
   """
+  alias IanaPortRegistry.Registry
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> IanaPortRegistry.hello()
-      :world
-
+  Lists all unassigned ports from the IANA port registry.
   """
-  def hello do
-    :world
+  def list_unassigned_ports() do
+    Registry.available_ports()
   end
 end
