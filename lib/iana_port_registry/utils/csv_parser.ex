@@ -4,15 +4,15 @@ defmodule IanaPortRegistry.Utils.CSVParser do
   """
 
   @static_registry Path.join(["lib", "db", "csv", "port-numbers.csv"])
-  require Logger
+  # require Logger
 
   # https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv
 
   def parse(:latest_local) do
     # File.stream!("data.csv")
-    Logger.info("Parsing CSV#{inspect(File.cwd())}")
+    # Logger.info("Parsing CSV#{inspect(File.cwd())}")
     file = Path.join([File.cwd() |> elem(1), @static_registry])
-    Logger.info("Parsing CSV#{inspect(file)}")
+    # Logger.info("Parsing CSV#{inspect(file)}")
 
     file
     |> File.stream!()
