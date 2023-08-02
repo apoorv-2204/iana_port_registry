@@ -15,7 +15,7 @@ defmodule IanaPortRegistry.Registry do
       "lib",
       "db",
       "parsed_data",
-      "1672826429_IANA_unassigned_ports_elixir_list.txt"
+      "port-numbers_IANA_unassigned_ports_elixir_list.txt"
     ])
   end
 

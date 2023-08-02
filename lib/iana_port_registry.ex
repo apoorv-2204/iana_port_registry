@@ -1,6 +1,6 @@
 defmodule IanaPortRegistry do
   @moduledoc """
-  Documentation for `IanaPortRegistry`.
+  Returns a list of all unassigned ports from the IANA port registry.
   """
   alias IanaPortRegistry.Registry
 
@@ -8,6 +8,6 @@ defmodule IanaPortRegistry do
   Lists all unassigned ports from the IANA port registry.
   """
   def list_unassigned_ports() do
-    Registry.available_ports()
+    Registry.read_data()
   end
 end

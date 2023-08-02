@@ -3,7 +3,7 @@ defmodule IanaPortRegistry.Utils.CSVParser do
   Parses local CSV files
   """
 
-  @static_registry Path.join(["lib", "db", "csv", "1672826429.csv"])
+  @static_registry Path.join(["lib", "db", "csv", "port-numbers.csv"])
   require Logger
 
   # https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv
@@ -50,9 +50,10 @@ defmodule IanaPortRegistry.Utils.CSVParser do
     end)
     |> Enum.sort()
     |> Enum.uniq()
+
     # |> range()
     # |> File.write!(file = Path.join([File.cwd() |> elem(1), @static_registry]))
-    |> IO.inspect(limit: :infinity)
+    # |> IO.inspect(limit: :infinity)
   end
 
   def get_with_range() do
